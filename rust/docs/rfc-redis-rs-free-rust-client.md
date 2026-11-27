@@ -220,6 +220,10 @@ README. Commands newer than Redis 6.2 document their minimum version
 - redis-rs 2.0 parity target ([#7641](https://github.com/valkey-io/valkey-glide/issues/7641)),
   missing commands ([#7060](https://github.com/valkey-io/valkey-glide/issues/7060))
   and options ([#7082](https://github.com/valkey-io/valkey-glide/issues/7082)).
+- First-party typed APIs for every user-facing Valkey 9.2 command and for
+  valkey-search 1.3, valkey-json 1.1 and valkey-bloom 1.0, so no documented
+  command needs `custom_command` (gaps in
+  [command-gap-analysis.md](command-gap-analysis.md)).
 - GLIDE feature parity with other bindings listed in #6915: client-side
   caching (#6918), circuit breaker (#6916), custom credentials provider
   (#6921), client info tag (#6920), custom logger (#6922), compression
@@ -698,6 +702,11 @@ accepted), #7169 ("Connection in recovery" not retryable).
 
 ### D. References
 
+- [implementation-plan.md](implementation-plan.md): ordered work items,
+  dependencies and estimates for this RFC
+- [command-gap-analysis.md](command-gap-analysis.md): typed-command gaps
+  against Valkey 9.2, valkey-search 1.3, valkey-json 1.1, valkey-bloom 1.0
+  and redis-rs 1.7
 - `rust/README.md`, `rust/DESIGN.md`, `rust/migration.md`,
   `rust/docs/redis-rs-compatibility.md`, `rust/docs/dev/options.md`
 - redis-rs 2.0 migration guide: https://github.com/redis-rs/redis-rs/blob/main/version2.md
